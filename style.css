@@ -5,29 +5,55 @@
     padding: 0;
 }
 
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
-    background: darkgoldenrod url(imagens/fundo-madeira.jpg) no-repeat top center;
+    background: url(imagens/fundo-madeira.jpg) no-repeat top center;
     background-size: cover;
     background-attachment: fixed;
 }
 
+main {
+    height: 100vh;
+    position: relative;
+}
+
 #telefone {
     position: fixed;
+    height: 627px;
+    width: 311px;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    background-image: url(imagens/frame-iphone.png);
+}
+
+iframe#tela {
+    margin-top: 80px;
+    margin-left: 22px;
+
+    height: 471px;
+    width: 267px;
 }
 
 #redes-sociais {
     text-align: right;
 }
 
-#redes-sociais > img {
+#redes-sociais img {
     width: 50px;
     margin: 10px;
     border-radius: 50%;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    transition: transform 0.2s 50ms, border 0.25s;
 }
 
-#redes-sociais > img:hover {
+#redes-sociais img:hover {
+    border: 2px solid white;
+    transform: scale(1.2);
 }
-
